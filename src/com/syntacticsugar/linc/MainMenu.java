@@ -2,7 +2,7 @@ package com.syntacticsugar.linc;
 
 import java.util.ArrayList;
 
-import com.example.codex.R;
+import com.syntacticsugar.linc.R;
 import com.syntacticsugar.linc.character.CharacterManager;
 
 import android.os.Bundle;

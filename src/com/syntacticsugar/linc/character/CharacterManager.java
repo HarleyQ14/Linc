@@ -45,6 +45,8 @@ public class CharacterManager {
 			} while (cursor.moveToNext());
 		}
 		
+		db.close();
+		
 		return characterNames;
 	}
 	

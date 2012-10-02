@@ -1,22 +1,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    android:divider="#ffffff"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="false"
+    android:showDividers="middle|beginning|end" >
 
     <TextView
         android:id="@+id/testText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:layout_weight="2"
         android:gravity="center_vertical|center_horizontal"
         android:text="Test Text" />
     
-    <ListView 
+    <ListView
         android:id="@+id/characterList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center_vertical|center_horizontal" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="30dp"
+        android:layout_weight="2"
+        android:footerDividersEnabled="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:headerDividersEnabled="true"
+        android:smoothScrollbar="true" />
     
 </LinearLayout>

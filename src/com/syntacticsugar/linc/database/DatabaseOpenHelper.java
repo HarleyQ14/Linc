@@ -6,7 +6,7 @@ import android.database.sqlite.*;
 public class DatabaseOpenHelper extends SQLiteOpenHelper {  
 	
 	public DatabaseOpenHelper(Context context) {
-		super(context, DatabaseValues.TABLE_CHARACTER, null, DatabaseValues.DATABASE_VERSION);
+		super(context, DatabaseValues.DATABASE_NAME, null, DatabaseValues.DATABASE_VERSION);
 	}
 	
 	public void onCreate(SQLiteDatabase db) {
