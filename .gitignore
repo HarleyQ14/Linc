@@ -1,3 +1,0 @@
-# Ignore binary files and files that are auto-generated at compile time.
-bin/**/*
-gen/**/*
