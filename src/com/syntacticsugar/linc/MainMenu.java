@@ -3,6 +3,9 @@ package com.syntacticsugar.linc;
 import java.util.ArrayList;
 
 import com.syntacticsugar.linc.R;
+import com.syntacticsugar.linc.activity.Abilities;
+import com.syntacticsugar.linc.activity.BasicInfo;
+import com.syntacticsugar.linc.activity.Combat;
 import com.syntacticsugar.linc.character.CharacterManager;
 
 import android.os.Bundle;
@@ -34,6 +37,23 @@ public class MainMenu extends TabActivity {
  
 		Resources ressources = getResources(); 
 		TabHost tabHost = getTabHost();
+		TabHost.TabSpec spec;
+		Intent intent;
+		
+		intent = new Intent().setClass(this, BasicInfo.class);
+		
+		spec = tabHost.newTabSpec("Info").setIndicator("Info").setContent(intent);
+		tabHost.addTab(spec);
+		
+		intent = new Intent().setClass(this, Abilities.class);
+		
+		spec = tabHost.newTabSpec("Abilities").setIndicator("Abilities").setContent(intent);
+		tabHost.addTab(spec);
+		
+		intent = new Intent().setClass(this, Combat.class);
+		
+		spec = tabHost.newTabSpec("Combat").setIndicator("Combat").setContent(intent);
+		tabHost.addTab(spec);
  
 		//set Windows tab as default (zero based)
 		tabHost.setCurrentTab(0);

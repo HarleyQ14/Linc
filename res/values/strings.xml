@@ -4,5 +4,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_basic_info">BasicInfo</string>
+    <string name="title_activity_abilities">Abilities</string>
+    <string name="title_activity_combat">Combat</string>
 
 </resources>
