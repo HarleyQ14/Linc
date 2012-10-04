@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.syntacticsugar.linc.R;
 import com.syntacticsugar.linc.activity.Abilities;
 import com.syntacticsugar.linc.activity.BasicInfo;
+import com.syntacticsugar.linc.activity.Characters;
 import com.syntacticsugar.linc.activity.Combat;
 import com.syntacticsugar.linc.character.CharacterManager;
 
@@ -40,9 +41,14 @@ public class MainMenu extends TabActivity {
 		TabHost.TabSpec spec;
 		Intent intent;
 		
+		intent = new Intent().setClass(this, Characters.class);
+		
+		spec = tabHost.newTabSpec("Character").setIndicator("Characters").setContent(intent);
+		tabHost.addTab(spec);
+		
 		intent = new Intent().setClass(this, BasicInfo.class);
 		
-		spec = tabHost.newTabSpec("Info").setIndicator("Info").setContent(intent);
+		spec = tabHost.newTabSpec("Description").setIndicator("Description").setContent(intent);
 		tabHost.addTab(spec);
 		
 		intent = new Intent().setClass(this, Abilities.class);
