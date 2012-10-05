@@ -8,26 +8,35 @@
         android:id="@+id/add_char_bar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:background="#123abc"
-        android:orientation="vertical" >
-        
-        <Button 
-           android:id="@+id/add_char_button"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="+"
-           android:textSize="20dip"
-            />
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp"
+        style="@android:style/ButtonBar"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/add_char_button"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:includeFontPadding="false"
+            android:text="@string/button_add_char"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginRight="15dp"
+            android:ems="10" />
         
     </LinearLayout>
     
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:text="@string/hello_world"
         tools:context=".Characters" />
 

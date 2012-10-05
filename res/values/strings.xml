@@ -8,5 +8,6 @@
     <string name="title_activity_abilities">Abilities</string>
     <string name="title_activity_combat">Combat</string>
     <string name="title_activity_characters">Characters</string>
+    <string name="button_add_char">+</string>
 
 </resources>
