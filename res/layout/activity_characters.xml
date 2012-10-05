@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/add_char_bar"
+        android:id="@+id/CharActionBar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingTop="12dp"
@@ -14,7 +14,7 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/add_char_button"
+            android:id="@+id/AddCharButton"
             android:layout_width="38dp"
             android:layout_height="38dp"
             android:layout_gravity="center_vertical"
@@ -25,19 +25,27 @@
             android:textSize="16dp" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/charSearchEdit"
             android:layout_width="fill_parent"
             android:layout_height="38dp"
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_marginRight="15dp"
-            android:ems="10" />
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/message_char_search" />
         
     </LinearLayout>
     
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world"
-        tools:context=".Characters" />
+    <ViewStub
+        android:id="@+id/emptyCharText"
+        android:layout="@layout/empty_char_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
 
+    <ListView
+        android:id="@+id/charList"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+    </ListView>
+    
 </LinearLayout>

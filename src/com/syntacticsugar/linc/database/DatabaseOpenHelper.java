@@ -29,7 +29,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
 		db.execSQL(DatabaseValues.TABLE_CLERIC_CREATE);
 		db.execSQL(DatabaseValues.TABLE_RAGE_CREATE);
 		
-		db.execSQL("INSERT INTO tbl_char VALUES ('Test Char','Human','Kristen','None','Medium','Female','Neutral','None','5 2', '125', 'Testing character')");
+		//db.execSQL("INSERT INTO tbl_char VALUES ('Test Char','Human','Kristen','None','Medium','Female','Neutral','None','5 2', '125', 'Testing character')");
 	}
 
 	@Override

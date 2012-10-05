@@ -50,6 +50,19 @@ public class CharacterManager {
 		return characterNames;
 	}
 	
+	public Cursor getCharacters() {
+		
+		SQLiteDatabase db = databaseHelper.getReadableDatabase();
+		
+		Cursor cursor = db.rawQuery(DatabaseValues.QUERY_ALL_CHAR_NAMES, null);
+		
+		if (!cursor.moveToFirst()) {
+			cursor = null;
+		}
+		
+		return cursor;
+	}
+	
 	public Character LoadCharacter(String characterName) {
 		return null;
 	}

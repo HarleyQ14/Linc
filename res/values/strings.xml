@@ -8,6 +8,8 @@
     <string name="title_activity_abilities">Abilities</string>
     <string name="title_activity_combat">Combat</string>
     <string name="title_activity_characters">Characters</string>
+    <string name="message_char_search">Search for a character</string>
+    <string name="message_char_list_empty">Your character list is empty</string>
     <string name="button_add_char">+</string>
 
 </resources>
