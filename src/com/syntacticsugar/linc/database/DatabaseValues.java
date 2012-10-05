@@ -10,7 +10,7 @@ public class DatabaseValues {
 
 	public static final int DATABASE_VERSION = 1;
 	public static final String DATABASE_NAME = "dnd";
-    
+
 	public static final String TABLE_CHARACTER = "tbl_char";
 	public static final String TABLE_CHARACTER_CREATE =
 			"CREATE TABLE " + TABLE_CHARACTER + " ( " +
@@ -25,7 +25,7 @@ public class DatabaseValues {
 			"char_height TEXT, " +
 			"char_weight TEXT, " +
 			"char_description TEXT, " +
-			"PRIMARY KEY (char_name ASC, char_race, char_player));";
+			"PRIMARY KEY (char_name ASC);";
     
 	public static final String TABLE_CLASS = "tbl_char_class";
 	public static final String TABLE_CLASS_CREATE = 
@@ -36,7 +36,7 @@ public class DatabaseValues {
 			"char_class_name TEXT, " +
 			"char_class_level INTEGER, " +
 			"char_class_notes TEXT, " +
-			"PRIMARY KEY (char_name ASC, char_race, char_player, " + 
+			"PRIMARY KEY (char_name ASC" + 
 			"char_class_name, char_class_level));";
     
 	public static final String TABLE_ABILITIES = "tbl_char_abilities";
@@ -48,7 +48,7 @@ public class DatabaseValues {
 			"char_abil_stat TEXT, " +
 			"char_abil_value INTEGER, " +
 			"char_abil_type TEXT, " +
-			"PRIMARY KEY (char_name ASC, char_race, char_player, " +
+			"PRIMARY KEY (char_name ASC" +
 			"char_abil_Stat, char_abil_value, char_abil_type));";
     
 	public static final String TABLE_COMBAT = "tbl_char_combat";
@@ -61,7 +61,7 @@ public class DatabaseValues {
 			"char_combat_speed INTEGER, " +
 			"char_combat_init INTEGER, " +
 			"char_combat_grapple_misc INTEGER, " +
-			"PRIMARY KEY (char_name ASC, char_race, char_player));";
+			"PRIMARY KEY (char_name ASC));";
     
 	public static final String TABLE_ATTACK = "tbl_char_attack";
 	public static final String TABLE_ATTACK_CREATE = 
@@ -71,7 +71,7 @@ public class DatabaseValues {
 			"char_player TEXT, " +
 			"char_attack_bonus INT, " +
 			"char_attack_type TEXT, " +
-			"PRIMARY KEY (char_name ASC, char_race, char_player, char_attack_type));";
+			"PRIMARY KEY (char_name ASC, char_attack_type));";
     
 	public static final String TABLE_SAVES = "tbl_char_saves";
 	public static final String TABLE_SAVES_CREATE = 
@@ -82,7 +82,7 @@ public class DatabaseValues {
 			"char_saves_throw TEXT, " + 
 			"char_saves_value INTEGER, " +
 			"char_saves_type TEXT, " +
-			"PRIMARY KEY (char_name ASC, char_race, char_player, char_saves_throw, char_saves_type));";
+			"PRIMARY KEY (char_name ASC, char_saves_throw, char_saves_type));";
     
 	public static final String TABLE_WEAPON = "tbl_char_weapon";
 	public static final String TABLE_WEAPON_CREATE = 
@@ -107,7 +107,7 @@ public class DatabaseValues {
 			"char_health_hit_dice_roll TEXT, " +
 			"char_health_hit_dice_num INTEGER, " +
 			"char_health_total_health INTEGER, " +
-			"PRIMARY KEY (char_name ASC, char_race, char_player, " +
+			"PRIMARY KEY (char_name ASC " +
 			"char_health_hit_dice_roll, char_health_hit_dice_num));";
     
 	public static final String TABLE_CONDITIONS = "tbl_char_conditions";
@@ -158,7 +158,7 @@ public class DatabaseValues {
     		"char_skill_ranks INTEGER, " +
     		"char_skill_misc INTEGER, " +
     		"char_skill_class INTEGER, " +
-    		"PRIMARY KEY (char_name ASC, char_race, char_player, " +
+    		"PRIMARY KEY (char_name ASC " +
     		"char_skill_name));";
     
     public static final String TABLE_FEATS = "tbl_char_feats";
@@ -169,7 +169,7 @@ public class DatabaseValues {
     		"char_player TEXT, " +
     		"char_feat_name TEXT, " +
     		"char_feat_notes TEXT, " +
-    		"PRIMARY KEY (char_name, char_race, char_player, " +
+    		"PRIMARY KEY (char_name " +
     		"char_feat_name));";
     
     public static final String TABLE_CASTING = "tbl_char_casting";
@@ -183,7 +183,7 @@ public class DatabaseValues {
     		"char_casting_bonus TEXT, " +
     		"char_casting_save INTEGER, " +
     		"char_casting_failure INTEGER, " +
-    		"PRIMARY KEY (char_name, char_race, char_player, " +
+    		"PRIMARY KEY (char_name ASC, " +
     		"char_casting_level, char_casting_per_day));";
     
     public static final String TABLE_SPELLS = "tbl_spells";
@@ -198,7 +198,7 @@ public class DatabaseValues {
     		"char_spell_type TEXT, " +
     		"char_spell_domain TEXT, " +
     		"char_spell_notes TEXT, " +
-    		"PRIMARY KEY (char_name ASC, char_race, char_player, " +
+    		"PRIMARY KEY (char_name ASC, " +
     		"char_spell_name));";
     
     public static final String TABLE_CLERIC = "tbl_char_cleric";
@@ -209,7 +209,7 @@ public class DatabaseValues {
     		"char_player TEXT, " +
     		"char_cleric_domain TEXT, " +
     		"char_cleric_greater_power TEXT, " +
-    		"PRIMARY KEY (char_name ASC, char_race, char_player, " +
+    		"PRIMARY KEY (char_name ASC, " +
     		"char_cleric_domain, char_cleric_greater_power));";
      
     public static final String TABLE_RAGE = "tbl_char_rage";
@@ -222,7 +222,7 @@ public class DatabaseValues {
     		"char_rage_duration TEXT, " +
     		"char_rage_ac_penalty INTEGER, " +
     		"char_rage_used INTEGER, " +
-    		"PRIMARY KEY (char_name ASC, char_race, char_player));";
+    		"PRIMARY KEY (char_name ASC));";
     
     public static final String QUERY_ALL_CHAR_NAMES = 
     		"SELECT char_name FROM tbl_char";

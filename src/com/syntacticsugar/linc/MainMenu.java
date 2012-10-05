@@ -1,28 +1,27 @@
 package com.syntacticsugar.linc;
 
-import java.util.ArrayList;
-
 import com.syntacticsugar.linc.R;
 import com.syntacticsugar.linc.activity.Abilities;
 import com.syntacticsugar.linc.activity.BasicInfo;
 import com.syntacticsugar.linc.activity.Characters;
 import com.syntacticsugar.linc.activity.Combat;
-import com.syntacticsugar.linc.character.CharacterManager;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.view.Menu;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TabHost;
 
 public class MainMenu extends TabActivity {
-
-	private CharacterManager charManager = new CharacterManager(this);
 	
+	public static int TAB_INDEX_CHARACTER_LIST = 0;
+	public static int TAB_INDEX_CHARACTER_DESCRIPTION = 1;
+	
+	
+	/**
+	 * Sets up the Tab list that acts as a header throughout the entire
+	 * application.
+	 */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         /*super.onCreate(savedInstanceState);
@@ -36,7 +35,6 @@ public class MainMenu extends TabActivity {
     	super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_menu);
  
-		Resources ressources = getResources(); 
 		TabHost tabHost = getTabHost();
 		TabHost.TabSpec spec;
 		Intent intent;

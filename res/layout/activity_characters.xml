@@ -22,7 +22,8 @@
             android:layout_marginRight="15dp"
             android:includeFontPadding="false"
             android:text="@string/button_add_char"
-            android:textSize="16dp" />
+            android:textSize="16dp"
+            android:onClick="onAddCharacterButtonClicked" />
 
         <EditText
             android:id="@+id/charSearchEdit"
