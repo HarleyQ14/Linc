@@ -15,7 +15,9 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int menu_settings=0x7f070001;
+        public static final int add_char_bar=0x7f070001;
+        public static final int add_char_button=0x7f070002;
+        public static final int menu_settings=0x7f070003;
         public static final int textView2=0x7f070000;
     }
     public static final class layout {
@@ -44,5 +46,6 @@ public final class R {
     }
     public static final class style {
         public static final int AppTheme=0x7f050000;
+        public static final int DialtactsTheme=0x7f050001;
     }
 }
